@@ -53,11 +53,12 @@ $.ajax({
   (función, 35 puntos)
 */
 function myFunctionAppend() {
+  let estrellas = $("input[name='rating']:checked").val();
   let newHtml = `
   <div class="review">
     ${document.getElementById("nombre").value}
     <br>
-    ${getStarsSpans(3)}
+    ${getStarsSpans(estrellas)}
     <br>
     ${document.getElementById("comentario").innerHTML}
   <div>`;
@@ -74,6 +75,7 @@ function myFunctionErase() {
     document.getElementById("nombre").value = "";
     document.getElementById("email").value = "";
     document.getElementById("comentario").innerHTML = "";
+
 }
 
 /*
